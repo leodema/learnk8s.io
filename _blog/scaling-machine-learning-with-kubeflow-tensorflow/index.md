@@ -20,9 +20,7 @@ js:
 
 Gathering facts and data to understand better the world we live in has become the new norm.
 
-From self-driving cars to smart personal assistants, data and data science is everywhere.
-
-Even the phones that we carry in our pockets now feature dedicated units for machine learning.
+From self-driving cars to smart personal assistants, data and data science is everywhere. Even the phones that we carry in our pockets now feature dedicated units for machine learning.
 
 In fact, there has never been more need for a more performant and efficient system to ingest and extract meanings out of large volumes of numbers.
 
@@ -32,67 +30,43 @@ Traditionally, the setup of the services and tools required for effective develo
 
 ## Build once, run ~~everywhere~~ on my machine
 
-Being able to run your models locally and reproduce the same results in the data farm is what you should expect.
+Being able to run your models locally and reproduce the same results in the data farm is what you should expect but it's not always the case.
 
-But it's not always like this.
+This issue is common in software development: you write an algorithm on your computer and test it locally. When it works well, you feel proud of your work and you decide to deploy it in the data farm or ask a colleague to test it. That's when it fails and you spend quite some time carrying out extensive checks before realising your colleague is still stuck at Python 2.7 while you are on Python 3.7! It can be even more tricky as the problem might lie on a suttle difference on a library version.
 
-And the issues are not new to any kind of software development either.
-
-You write an algorithm on your computer and test it by training it locally to produce a model.
-
-It works well, and you are proud of your work.
-
-But when you send it to the data farm or your colleague tries to run it, it fails.
-
-It's only after carrying out extensive checks that you realise that there is a conflict of runtime version — your colleague is still stuck at Python 2.7!
-
-It would be much easier if you could send your models alongside your environment and settings.
-
-You could genuinely have reproducible results independently from when you run your tests.
-
-Particularly when you need a larger computer to process even more data.
+It would be much easier if you could send your models alongside your environment and settings. In this way you could genuinely have reproducible results independently from when you run your tests.
 
 ## When your computer is not enough
 
-There comes the point while developing models that the computer you are using will not be enough to train your model.
+There comes the point, if you really have the Big Data you have being bragging about, that the computer you are using will not be enough to train your model.
 
-Sure, you could buy a powerful gaming PC and stuff it with video cards.
+Sure, you could upgrade your current one and that might solve the problem, but for how long?
 
-However, you will have to wait for it to be delivered and set it all up with the required pre-requisites.
+Also if you are working in a team you will all require the same setup, buying a powerful machine for each one might not be a great investiment and its utilization will be limited on your working (coding) hours and days! The rest of the time it stays under your desk to collects dust.
 
-And if you are working in a team and they all require the same setup, buying a powerful machine for each of the members will not be financially viable.
+A better strategy would be to rent the kit only when you need it, so you will pay only for what you actually use.
 
-You won't have a good return on investment when you go on holiday.
-
-The kit stays under your desk and collects dust.
-
-A better strategy would be to rent the kit only when you need it.
-
-So you can pay only for what you use.
-
-Perhaps you could use a workstation in the cloud so that even your colleagues can provision large clusters when and if they needed.
+A common solution is to use a workstation in the cloud, in this way your colleagues can as well provision large clusters when and if they needed them.
 
 ## The whole setup is too complex
 
-Provisioning clusters in the cloud, designing the infrastructure to ingest and extract meaningful data, researching and training models.
+As a data scientist, your expertise and duties span several disciplines, such as provisioning clusters, researching and training models, designing the infrastructure to ingest and extract meaningful information and so on.
 
-As a data scientist, your expertise and duties span several disciplines.
-
-A data scientist expects that you will focus on a handful of things such as writing an algorithm, training the model, testing and evaluating the outcome of the model.
+On the other hand data scientists need to focus on a handful of things such as creating, testing and evaluating models to deliver the results that the business expect from them.
 
 ![Data Science Expectations]({% link _blog/scaling-machine-learning-with-kubeflow-tensorflow/core.png %})
 
 The reality, however, is very sobering.
 
-You have to deal with a myriad of things.
-
-From setting up the infrastructure that can serve the required models, to configuring monitoring tools, tuning resource management, supporting batched jobs and the list goes on!
+You have to deal with a myriad of things, from setting up the infrastructure that can serve the required models, to configuring monitoring tools, tuning resource management, supporting batched jobs and much more!
 
 {% include_relative complexity.html %}
 
-To become a data scientist, one has to quickly grasp and specialise other aspects of software development, operations and infrastructure management.
+To become a data scientist, one has to quickly grasp and also master aspects of software development, operations and infrastructure management.
 
 Even if you don't want to, unfortunately.
+
+More often than not this produce a sub-optimal engineering pipeline that is not only inefficient from an engineerig perspective but it aslo waste your time and becomes tedious to work with.
 
 ## Scaling machine learning in the cloud
 
@@ -102,7 +76,7 @@ _What if you could leverage an existing platform for scaling your models without
 
 _What if you could train and evaluate your model in the cloud as you do locally?_
 
-You could finally focus on what you do best: the data science!
+You could finally focus on what you do best: data science!
 
 Few competing solutions provide an easy entry to a data farm.
 
@@ -117,7 +91,7 @@ They are all valid solutions, but they tend to run in public clouds. Additionall
 
 ## Kubeflow — an open source machine learning platform
 
-An excellent alternative for training and evaluating your models in public and private clouds is to use [Kubeflow](https://github.com/kubeflow/kubeflow) — an open-source toolkit to distribute machine learning.
+An excellent alternative for training and evaluating your models in public and private clouds is [Kubeflow](https://github.com/kubeflow/kubeflow) — an open-source toolkit to distributed machine learning.
 
 Kubeflow is designed to make your machine learning experiments portable and scalable.
 
